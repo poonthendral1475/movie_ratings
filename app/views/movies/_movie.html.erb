@@ -1,0 +1,44 @@
+<!--<div id="<%#= dom_id movie %>">-->
+<!--  <p>-->
+<!--    <strong>Title:</strong>-->
+
+<!--  </p>-->
+
+<!--  <p>-->
+<!--    <strong>Genre:</strong>-->
+
+<!--  </p>-->
+
+<!--  <p>-->
+<!--    <strong>Review:</strong>-->
+
+<!--  </p>-->
+
+<!--  <p>-->
+<!--    <strong>Rating:</strong>-->
+
+<!--  </p>-->
+
+<!--  <p>-->
+<!--    <strong>Created Time</strong>-->
+    <%#= movie.created_at.strftime(" %d %b %y %I:%M %p") %>
+<!--  </p>-->
+
+<!--  <p>-->
+<!--    <strong>Created Time</strong>-->
+    <%#= movie.updated_at.strftime(" %d %b %y %I:%M %p") %>
+<!--  </p>-->
+
+<!--</div>-->
+<div class="card text-center mt-5 w-50">
+  <div class="card-header">
+    <%= movie.genre %>
+  </div>
+  <div class="card-body">
+    <h3 class="card-title"><%= movie.title %></h3>
+    <p class="card-text"> <%= movie.review %></p>
+  </div>
+  <div class="card-footer text-body-secondary rating">
+    <span> * * </span><%= movie.rating %><span> * * </span>
+  </div>
+</div>

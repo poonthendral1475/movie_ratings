@@ -1,0 +1,37 @@
+
+<% content_for :title, "Movies" %>
+<div id="index-page">
+<h1 class="d-flex justify-content-center mb-5 mt-3">Movies</h1>
+  <div class="plus-div d-flex justify-content-end">
+  <%= link_to " + ", new_movie_path, class:"plus click new-btn btn btn-primary " %>
+  </div>
+<table cellspacing="3px" cellpadding="5px" class="table table-striped-columns">
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Genre</th>
+    <th>Review</th>
+    <th>Rating</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @movies.each do |movie| %>
+    <tr>
+      <td><%= movie.title %></td>
+      <td><%= movie.genre %></td>
+      <td><%= movie.review %></td>
+      <td><%= movie.rating %><sup>*</sup></td>
+      <td>
+        <%= link_to "Show", movie , class:"click btn btn-success"%> |
+        <%= link_to "Edit", edit_movie_path(movie) ,class:"click btn btn-secondary" %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<div class="d-flex justify-content-center">
+  <%= link_to "New", new_movie_path, class:"new click new-btn btn btn-primary" %>
+</div>
+</div>

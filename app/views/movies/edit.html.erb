@@ -1,0 +1,15 @@
+<% content_for :title, "Editing movie" %>
+
+<h1 class="text-center mt-5">Editing movie</h1>
+<div class="edit-center">
+<div class="edit-form">
+  <%= render "form", movie: @movie %>
+</div>
+</div>
+
+
+<br>
+
+<div class="d-flex justify-content-center">
+  <%= link_to "Show", @movie, class:"click btn btn-success" %>  |  <%= link_to "Back", movies_path, class:"click btn btn-outline-danger" %>
+</div>
